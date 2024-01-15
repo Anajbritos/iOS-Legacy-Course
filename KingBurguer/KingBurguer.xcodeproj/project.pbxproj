@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		7006ABD62B503AE6009AC758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006ABD52B503AE6009AC758 /* AppDelegate.swift */; };
 		7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006ABD72B503AE6009AC758 /* SceneDelegate.swift */; };
-		7006ABDA2B503AE6009AC758 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006ABD92B503AE6009AC758 /* ViewController.swift */; };
 		7006ABDF2B503AE8009AC758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABDE2B503AE8009AC758 /* Assets.xcassets */; };
 		7006ABE22B503AE8009AC758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABE02B503AE8009AC758 /* LaunchScreen.storyboard */; };
+		7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099205B2B51D30500BB23AA /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7006ABD22B503AE6009AC758 /* KingBurguer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingBurguer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7006ABD52B503AE6009AC758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7006ABD72B503AE6009AC758 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7006ABD92B503AE6009AC758 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7006ABDE2B503AE8009AC758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7006ABE12B503AE8009AC758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7006ABE32B503AE8009AC758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7099205B2B51D30500BB23AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,30 @@
 		7006ABD42B503AE6009AC758 /* KingBurguer */ = {
 			isa = PBXGroup;
 			children = (
+				709920592B51D1FB00BB23AA /* SignIn */,
 				7006ABD52B503AE6009AC758 /* AppDelegate.swift */,
 				7006ABD72B503AE6009AC758 /* SceneDelegate.swift */,
-				7006ABD92B503AE6009AC758 /* ViewController.swift */,
 				7006ABDE2B503AE8009AC758 /* Assets.xcassets */,
 				7006ABE02B503AE8009AC758 /* LaunchScreen.storyboard */,
 				7006ABE32B503AE8009AC758 /* Info.plist */,
 			);
 			path = KingBurguer;
+			sourceTree = "<group>";
+		};
+		709920592B51D1FB00BB23AA /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				7099205A2B51D20600BB23AA /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		7099205A2B51D20600BB23AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7099205B2B51D30500BB23AA /* SignInViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7006ABDA2B503AE6009AC758 /* ViewController.swift in Sources */,
+				7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */,
 				7006ABD62B503AE6009AC758 /* AppDelegate.swift in Sources */,
 				7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */,
 			);
