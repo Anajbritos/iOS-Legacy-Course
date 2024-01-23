@@ -14,6 +14,8 @@
 		7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099205B2B51D30500BB23AA /* SignInViewController.swift */; };
 		70DF632B2B5FF7EB00E2F254 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */; };
 		70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632C2B5FF80000E2F254 /* SignInState.swift */; };
+		70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63312B5FFE7300E2F254 /* SignUpViewController.swift */; };
+		70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63332B6002AC00E2F254 /* SignInCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7099205B2B51D30500BB23AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		70DF632C2B5FF80000E2F254 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
+		70DF63312B5FFE7300E2F254 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		70DF63332B6002AC00E2F254 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		7006ABD42B503AE6009AC758 /* KingBurguer */ = {
 			isa = PBXGroup;
 			children = (
+				70DF632E2B5FFE4800E2F254 /* SignUp */,
 				709920592B51D1FB00BB23AA /* SignIn */,
 				7006ABD52B503AE6009AC758 /* AppDelegate.swift */,
 				7006ABD72B503AE6009AC758 /* SceneDelegate.swift */,
@@ -73,6 +78,7 @@
 			children = (
 				70DF63292B5FF7D200E2F254 /* ViewModel */,
 				7099205A2B51D20600BB23AA /* View */,
+				70DF63332B6002AC00E2F254 /* SignInCoordinator.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -90,6 +96,30 @@
 			children = (
 				70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */,
 				70DF632C2B5FF80000E2F254 /* SignInState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70DF632E2B5FFE4800E2F254 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				70DF63302B5FFE6600E2F254 /* ViewModel */,
+				70DF632F2B5FFE5D00E2F254 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		70DF632F2B5FFE5D00E2F254 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70DF63312B5FFE7300E2F254 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70DF63302B5FFE6600E2F254 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +198,8 @@
 				7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */,
 				7006ABD62B503AE6009AC758 /* AppDelegate.swift in Sources */,
 				7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */,
+				70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */,
+				70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */,
 				70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
