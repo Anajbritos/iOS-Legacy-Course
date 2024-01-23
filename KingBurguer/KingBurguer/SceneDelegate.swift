@@ -16,8 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        let viewModel = SignInViewModel()
+        
+        let signInVC = SignInViewController()
+        signInVC.viewModel = viewModel
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.rootViewController = SignInViewController()
+        window?.rootViewController = signInVC
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         

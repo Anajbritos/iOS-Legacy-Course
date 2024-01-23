@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SignInViewController : UIViewController {
+class SignInViewController: UIViewController {
     
     lazy var email: UITextField = {
         let ed = UITextField()
@@ -32,8 +32,15 @@ class SignInViewController : UIViewController {
         btn.setTitleColor(.black, for: .normal)
         btn.backgroundColor = .yellow
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(sendDidTap), for: .touchUpInside)
         return btn
     }()
+    
+    var viewModel: SignInViewModel? {
+        didSet {
+            viewModel?.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,11 +75,29 @@ class SignInViewController : UIViewController {
         NSLayoutConstraint.activate(passwordConstraints)
         NSLayoutConstraint.activate(sendConstraints)
         
-        send.addTarget(self, action: #selector(sendDidTap), for: .touchUpInside)
-        
     }
     
     @objc func sendDidTap(_ sender: UIButton) {
-        print("Clicou")
+        viewModel?.send()
+    }
+}
+
+extension SignInViewController: SignInViewModelDelegate {
+    func viewModelDidChanged(state: SignInState) {
+        switch(state) {
+            case .none:
+                break
+            case .loading:
+                break
+            case .goToHome:
+                break
+            case .error(let msg):
+                let alert = UIAlertController(title: "Titulo", message: msg, preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                
+                self.present(alert, animated: true)
+                break
+        }
     }
 }
