@@ -16,6 +16,12 @@
 		70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632C2B5FF80000E2F254 /* SignInState.swift */; };
 		70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63312B5FFE7300E2F254 /* SignUpViewController.swift */; };
 		70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63332B6002AC00E2F254 /* SignInCoordinator.swift */; };
+		70DF63362B6007E300E2F254 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63352B6007E300E2F254 /* SignUpCoordinator.swift */; };
+		70DF63382B60308800E2F254 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63372B60308800E2F254 /* SignUpViewModel.swift */; };
+		70DF633A2B613A2700E2F254 /* SignUpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63392B613A2700E2F254 /* SignUpState.swift */; };
+		70DF633D2B64293100E2F254 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF633C2B64293100E2F254 /* HomeCoordinator.swift */; };
+		70DF63422B64298500E2F254 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63412B64298500E2F254 /* HomeViewController.swift */; };
+		70DF63442B64298E00E2F254 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF63432B64298E00E2F254 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		70DF632C2B5FF80000E2F254 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
 		70DF63312B5FFE7300E2F254 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		70DF63332B6002AC00E2F254 /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		70DF63352B6007E300E2F254 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		70DF63372B60308800E2F254 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		70DF63392B613A2700E2F254 /* SignUpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpState.swift; sourceTree = "<group>"; };
+		70DF633C2B64293100E2F254 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		70DF63412B64298500E2F254 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		70DF63432B64298E00E2F254 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 		7006ABD42B503AE6009AC758 /* KingBurguer */ = {
 			isa = PBXGroup;
 			children = (
+				70DF633B2B64292300E2F254 /* Home */,
 				70DF632E2B5FFE4800E2F254 /* SignUp */,
 				709920592B51D1FB00BB23AA /* SignIn */,
 				7006ABD52B503AE6009AC758 /* AppDelegate.swift */,
@@ -105,6 +118,7 @@
 			children = (
 				70DF63302B5FFE6600E2F254 /* ViewModel */,
 				70DF632F2B5FFE5D00E2F254 /* View */,
+				70DF63352B6007E300E2F254 /* SignUpCoordinator.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -120,6 +134,34 @@
 		70DF63302B5FFE6600E2F254 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				70DF63372B60308800E2F254 /* SignUpViewModel.swift */,
+				70DF63392B613A2700E2F254 /* SignUpState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70DF633B2B64292300E2F254 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70DF63402B64295900E2F254 /* ViewModel */,
+				70DF633F2B64295300E2F254 /* View */,
+				70DF633C2B64293100E2F254 /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		70DF633F2B64295300E2F254 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70DF63412B64298500E2F254 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70DF63402B64295900E2F254 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70DF63432B64298E00E2F254 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,9 +240,15 @@
 				7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */,
 				7006ABD62B503AE6009AC758 /* AppDelegate.swift in Sources */,
 				7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */,
+				70DF63382B60308800E2F254 /* SignUpViewModel.swift in Sources */,
+				70DF63362B6007E300E2F254 /* SignUpCoordinator.swift in Sources */,
 				70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */,
+				70DF633A2B613A2700E2F254 /* SignUpState.swift in Sources */,
+				70DF63442B64298E00E2F254 /* HomeViewModel.swift in Sources */,
 				70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */,
 				70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */,
+				70DF633D2B64293100E2F254 /* HomeCoordinator.swift in Sources */,
+				70DF63422B64298500E2F254 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

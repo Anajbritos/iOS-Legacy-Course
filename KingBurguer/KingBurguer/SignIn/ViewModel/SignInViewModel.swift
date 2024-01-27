@@ -14,6 +14,7 @@ protocol SignInViewModelDelegate {
 class SignInViewModel {
     
     var delegate: SignInViewModelDelegate?
+    var coordinator: SignInCoordinator?
     
     var state: SignInState = .none {
         didSet {
@@ -23,17 +24,18 @@ class SignInViewModel {
     
     func send() {
         state = .loading
-        
-        // aqui eu espero 2 segundos (LATENCIA)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.state = .error("Usuario nao existe")
+            self.state = .goToHome
         }
     }
     
-    // 1. NADA - preparado para receber o input
-    // 2. CARREGANDO
-    // 3. SUCESSO - navegar para a tela principal
-    // 4. ERRO - mostrar uma mensagem vinda do servidor (usuario nao existe)
+    func goToSignUp() {
+        coordinator?.signUp()
+    }
+    
+    func goToHome() {
+        coordinator?.home()
+    }
     
 }
 
