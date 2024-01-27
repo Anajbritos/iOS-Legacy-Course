@@ -11,6 +11,7 @@
 		7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006ABD72B503AE6009AC758 /* SceneDelegate.swift */; };
 		7006ABDF2B503AE8009AC758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABDE2B503AE8009AC758 /* Assets.xcassets */; };
 		7006ABE22B503AE8009AC758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABE02B503AE8009AC758 /* LaunchScreen.storyboard */; };
+		7059A4A42B655C8C0000EB57 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7059A4A32B655C8C0000EB57 /* LoadingButton.swift */; };
 		7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099205B2B51D30500BB23AA /* SignInViewController.swift */; };
 		70DF632B2B5FF7EB00E2F254 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */; };
 		70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632C2B5FF80000E2F254 /* SignInState.swift */; };
@@ -31,6 +32,7 @@
 		7006ABDE2B503AE8009AC758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7006ABE12B503AE8009AC758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7006ABE32B503AE8009AC758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7059A4A32B655C8C0000EB57 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		7099205B2B51D30500BB23AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		70DF632C2B5FF80000E2F254 /* SignInState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInState.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		7006ABD42B503AE6009AC758 /* KingBurguer */ = {
 			isa = PBXGroup;
 			children = (
+				7059A4A12B655C680000EB57 /* Common */,
 				70DF633B2B64292300E2F254 /* Home */,
 				70DF632E2B5FFE4800E2F254 /* SignUp */,
 				709920592B51D1FB00BB23AA /* SignIn */,
@@ -84,6 +87,22 @@
 				7006ABE32B503AE8009AC758 /* Info.plist */,
 			);
 			path = KingBurguer;
+			sourceTree = "<group>";
+		};
+		7059A4A12B655C680000EB57 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7059A4A22B655C7E0000EB57 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7059A4A22B655C7E0000EB57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7059A4A32B655C8C0000EB57 /* LoadingButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		709920592B51D1FB00BB23AA /* SignIn */ = {
@@ -244,6 +263,7 @@
 				70DF63362B6007E300E2F254 /* SignUpCoordinator.swift in Sources */,
 				70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */,
 				70DF633A2B613A2700E2F254 /* SignUpState.swift in Sources */,
+				7059A4A42B655C8C0000EB57 /* LoadingButton.swift in Sources */,
 				70DF63442B64298E00E2F254 /* HomeViewModel.swift in Sources */,
 				70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */,
 				70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */,
