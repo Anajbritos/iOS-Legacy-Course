@@ -15,6 +15,8 @@
 		70492E982B69283800BA9197 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E972B69283800BA9197 /* ProfileViewController.swift */; };
 		70492E9A2B69284300BA9197 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E992B69284300BA9197 /* FeedViewController.swift */; };
 		70492E9C2B6935E700BA9197 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */; };
+		70492E9E2B69491500BA9197 /* HighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E9D2B69491500BA9197 /* HighlightView.swift */; };
+		70492EA02B6975EA00BA9197 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E9F2B6975EA00BA9197 /* FeedCollectionViewCell.swift */; };
 		7059A4A42B655C8C0000EB57 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7059A4A32B655C8C0000EB57 /* LoadingButton.swift */; };
 		7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099205B2B51D30500BB23AA /* SignInViewController.swift */; };
 		70DF632B2B5FF7EB00E2F254 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */; };
@@ -40,6 +42,8 @@
 		70492E972B69283800BA9197 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		70492E992B69284300BA9197 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		70492E9D2B69491500BA9197 /* HighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightView.swift; sourceTree = "<group>"; };
+		70492E9F2B6975EA00BA9197 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		7059A4A32B655C8C0000EB57 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		7099205B2B51D30500BB23AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			children = (
 				70492E992B69284300BA9197 /* FeedViewController.swift */,
 				70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */,
+				70492E9D2B69491500BA9197 /* HighlightView.swift */,
+				70492E9F2B6975EA00BA9197 /* FeedCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DF632B2B5FF7EB00E2F254 /* SignInViewModel.swift in Sources */,
+				70492E9E2B69491500BA9197 /* HighlightView.swift in Sources */,
+				70492EA02B6975EA00BA9197 /* FeedCollectionViewCell.swift in Sources */,
 				7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */,
 				7006ABD62B503AE6009AC758 /* AppDelegate.swift in Sources */,
 				7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */,

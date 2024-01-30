@@ -18,7 +18,6 @@ class SignUpViewController: UIViewController {
     
     let container: UIView = {
         let v = UIView()
-        v.backgroundColor = .black
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
