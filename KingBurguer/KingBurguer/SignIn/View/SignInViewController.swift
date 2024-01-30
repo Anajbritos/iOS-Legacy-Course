@@ -42,21 +42,19 @@ class SignInViewController: UIViewController {
         return ed
     }()
     
-    lazy var send: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("Entrar", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
+    lazy var send: LoadingButton = {
+        let btn = LoadingButton()
+        btn.title = "Entrar"
+        btn.titleColor = .white
         btn.backgroundColor = .red
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(sendDidTap), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(sendDidTap))
         return btn
     }()
     
     lazy var register: UIButton = {
         let btn = UIButton()
         btn.setTitle("Criar Conta", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        
+        btn.setTitleColor(.label, for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.addTarget(self, action: #selector(registerDidTap), for: .touchUpInside)
         return btn
@@ -98,7 +96,7 @@ class SignInViewController: UIViewController {
         heightConstraint.priority = .defaultLow
         heightConstraint.isActive = true
         
-        let containerCosntraints = [
+        let containerConstraints = [
             container.widthAnchor.constraint(equalTo: view.widthAnchor),
             container.topAnchor.constraint(equalTo: scroll.topAnchor),
             container.leadingAnchor.constraint(equalTo: scroll.leadingAnchor),
@@ -122,21 +120,21 @@ class SignInViewController: UIViewController {
         ]
         
         let sendConstraints = [
-            send.topAnchor.constraint(equalTo: password.bottomAnchor, constant: 10),
+            send.topAnchor.constraint(equalTo: password.bottomAnchor, constant: 20),
             send.trailingAnchor.constraint(equalTo: password.trailingAnchor),
             send.leadingAnchor.constraint(equalTo: password.leadingAnchor),
             send.heightAnchor.constraint(equalToConstant: 50.0)
         ]
         
         let registerConstraints = [
-            register.topAnchor.constraint(equalTo: send.bottomAnchor, constant: 20),
+            register.topAnchor.constraint(equalTo: send.bottomAnchor, constant: 10),
             register.trailingAnchor.constraint(equalTo: password.trailingAnchor),
             register.leadingAnchor.constraint(equalTo: password.leadingAnchor),
             register.heightAnchor.constraint(equalToConstant: 50.0)
         ]
         
         NSLayoutConstraint.activate(scrollContraints)
-        NSLayoutConstraint.activate(containerCosntraints)
+        NSLayoutConstraint.activate(containerConstraints)
         NSLayoutConstraint.activate(emailConstraints)
         NSLayoutConstraint.activate(passwordConstraints)
         NSLayoutConstraint.activate(sendConstraints)
@@ -209,6 +207,7 @@ extension SignInViewController: SignInViewModelDelegate {
             case .none:
                 break
             case .loading:
+                send.startLoading(true)
                 break
             case .goToHome:
                 viewModel?.goToHome()
