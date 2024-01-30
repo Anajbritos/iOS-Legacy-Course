@@ -11,6 +11,10 @@
 		7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7006ABD72B503AE6009AC758 /* SceneDelegate.swift */; };
 		7006ABDF2B503AE8009AC758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABDE2B503AE8009AC758 /* Assets.xcassets */; };
 		7006ABE22B503AE8009AC758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7006ABE02B503AE8009AC758 /* LaunchScreen.storyboard */; };
+		70492E962B69282A00BA9197 /* CoupomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E952B69282A00BA9197 /* CoupomViewController.swift */; };
+		70492E982B69283800BA9197 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E972B69283800BA9197 /* ProfileViewController.swift */; };
+		70492E9A2B69284300BA9197 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E992B69284300BA9197 /* FeedViewController.swift */; };
+		70492E9C2B6935E700BA9197 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */; };
 		7059A4A42B655C8C0000EB57 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7059A4A32B655C8C0000EB57 /* LoadingButton.swift */; };
 		7099205C2B51D30500BB23AA /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099205B2B51D30500BB23AA /* SignInViewController.swift */; };
 		70DF632B2B5FF7EB00E2F254 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */; };
@@ -32,6 +36,10 @@
 		7006ABDE2B503AE8009AC758 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7006ABE12B503AE8009AC758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7006ABE32B503AE8009AC758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70492E952B69282A00BA9197 /* CoupomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupomViewController.swift; sourceTree = "<group>"; };
+		70492E972B69283800BA9197 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		70492E992B69284300BA9197 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		7059A4A32B655C8C0000EB57 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		7099205B2B51D30500BB23AA /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70DF632A2B5FF7EB00E2F254 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -76,6 +84,9 @@
 		7006ABD42B503AE6009AC758 /* KingBurguer */ = {
 			isa = PBXGroup;
 			children = (
+				70492E902B6927E200BA9197 /* Coupom */,
+				70492E8E2B6927D700BA9197 /* Profile */,
+				70492E8C2B6927CD00BA9197 /* Feed */,
 				7059A4A12B655C680000EB57 /* Common */,
 				70DF633B2B64292300E2F254 /* Home */,
 				70DF632E2B5FFE4800E2F254 /* SignUp */,
@@ -87,6 +98,55 @@
 				7006ABE32B503AE8009AC758 /* Info.plist */,
 			);
 			path = KingBurguer;
+			sourceTree = "<group>";
+		};
+		70492E8C2B6927CD00BA9197 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				70492E8D2B6927D200BA9197 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		70492E8D2B6927D200BA9197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70492E992B69284300BA9197 /* FeedViewController.swift */,
+				70492E9B2B6935E700BA9197 /* FeedTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70492E8E2B6927D700BA9197 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				70492E8F2B6927DE00BA9197 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		70492E8F2B6927DE00BA9197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70492E972B69283800BA9197 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70492E902B6927E200BA9197 /* Coupom */ = {
+			isa = PBXGroup;
+			children = (
+				70492E912B6927EA00BA9197 /* View */,
+			);
+			path = Coupom;
+			sourceTree = "<group>";
+		};
+		70492E912B6927EA00BA9197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70492E952B69282A00BA9197 /* CoupomViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7059A4A12B655C680000EB57 /* Common */ = {
@@ -217,6 +277,7 @@
 				TargetAttributes = {
 					7006ABD12B503AE6009AC758 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -261,13 +322,17 @@
 				7006ABD82B503AE6009AC758 /* SceneDelegate.swift in Sources */,
 				70DF63382B60308800E2F254 /* SignUpViewModel.swift in Sources */,
 				70DF63362B6007E300E2F254 /* SignUpCoordinator.swift in Sources */,
+				70492E982B69283800BA9197 /* ProfileViewController.swift in Sources */,
+				70492E9C2B6935E700BA9197 /* FeedTableViewCell.swift in Sources */,
 				70DF63342B6002AC00E2F254 /* SignInCoordinator.swift in Sources */,
 				70DF633A2B613A2700E2F254 /* SignUpState.swift in Sources */,
+				70492E9A2B69284300BA9197 /* FeedViewController.swift in Sources */,
 				7059A4A42B655C8C0000EB57 /* LoadingButton.swift in Sources */,
 				70DF63442B64298E00E2F254 /* HomeViewModel.swift in Sources */,
 				70DF63322B5FFE7300E2F254 /* SignUpViewController.swift in Sources */,
 				70DF632D2B5FF80000E2F254 /* SignInState.swift in Sources */,
 				70DF633D2B64293100E2F254 /* HomeCoordinator.swift in Sources */,
+				70492E962B69282A00BA9197 /* CoupomViewController.swift in Sources */,
 				70DF63422B64298500E2F254 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6V2Y925Q4D;
@@ -427,6 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.anajulia.KingBurguer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -437,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6V2Y925Q4D;

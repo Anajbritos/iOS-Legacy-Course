@@ -104,7 +104,7 @@ class SignInViewController: UIViewController {
             container.bottomAnchor.constraint(equalTo: scroll.bottomAnchor),
             container.heightAnchor.constraint(equalToConstant: 470)
         ]
-
+        
         let emailConstraints = [
             email.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 20),
             email.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -20),
@@ -156,8 +156,8 @@ class SignInViewController: UIViewController {
         let visible = notification.name == UIResponder.keyboardWillShowNotification
         
         let keyboardFrame = visible
-            ? UIResponder.keyboardFrameEndUserInfoKey
-            : UIResponder.keyboardFrameBeginUserInfoKey
+        ? UIResponder.keyboardFrameEndUserInfoKey
+        : UIResponder.keyboardFrameBeginUserInfoKey
         
         if let keyboardSize = (notification.userInfo?[keyboardFrame] as? NSValue)?.cgRectValue {
             onKeyboardChanged(visible, height: keyboardSize.height)
@@ -204,21 +204,21 @@ extension SignInViewController: UITextFieldDelegate {
 extension SignInViewController: SignInViewModelDelegate {
     func viewModelDidChanged(state: SignInState) {
         switch(state) {
-            case .none:
-                break
-            case .loading:
-                send.startLoading(true)
-                break
-            case .goToHome:
-                viewModel?.goToHome()
-                break
-            case .error(let msg):
-                let alert = UIAlertController(title: "Titulo", message: msg, preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Ok", style: .default))
-                
-                self.present(alert, animated: true)
-                break
+        case .none:
+            break
+        case .loading:
+            send.startLoading(true)
+            break
+        case .goToHome:
+            viewModel?.goToHome()
+            break
+        case .error(let msg):
+            let alert = UIAlertController(title: "Titulo", message: msg, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            
+            self.present(alert, animated: true)
+            break
         }
     }
 }
