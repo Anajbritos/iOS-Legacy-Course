@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum SignInForm: Int {
+    case email = 1
+    case password = 2
+}
+
 class SignInViewController: UIViewController {
     
     let scroll: UIScrollView = {
@@ -22,23 +27,31 @@ class SignInViewController: UIViewController {
         return v
     }()
     
-    lazy var email: UITextField = {
-        let ed = UITextField()
-        ed.borderStyle = .roundedRect
+    lazy var email: TextField = {
+        let ed = TextField()
         ed.placeholder = "Entre com seu email"
         ed.returnKeyType = .next
+        ed.error = "Email inválido"
+        ed.failure = {
+            return !ed.text.isEmail()
+        }
         ed.delegate = self
-        ed.translatesAutoresizingMaskIntoConstraints = false
+        ed.keyboardType = .emailAddress
+        ed.bitmask = SignInForm.email.rawValue
         return ed
     }()
     
-    lazy var password: UITextField = {
-        let ed = UITextField()
-        ed.borderStyle = .roundedRect
+    lazy var password: TextField = {
+        let ed = TextField()
         ed.placeholder = "Entre com sua senha"
+        ed.error = "A senha deve ter no minimo 8 caracteres"
         ed.returnKeyType = .done
+        ed.secureTextEntry = true
+        ed.failure = {
+            return ed.text.count <= 8
+        }
         ed.delegate = self
-        ed.translatesAutoresizingMaskIntoConstraints = false
+        ed.bitmask = SignInForm.password.rawValue
         return ed
     }()
     
@@ -48,6 +61,7 @@ class SignInViewController: UIViewController {
         btn.titleColor = .white
         btn.backgroundColor = .red
         btn.addTarget(self, action: #selector(sendDidTap))
+        btn.enable(false)
         return btn
     }()
     
@@ -65,6 +79,8 @@ class SignInViewController: UIViewController {
             viewModel?.delegate = self
         }
     }
+    
+    var bitmaskResult: Int = 0
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -109,14 +125,13 @@ class SignInViewController: UIViewController {
             email.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 20),
             email.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -20),
             email.centerYAnchor.constraint(equalTo: container.centerYAnchor, constant: -150.0),
-            email.heightAnchor.constraint(equalToConstant: 50.0),
         ]
         
         let passwordConstraints = [
             password.leadingAnchor.constraint(equalTo: email.leadingAnchor),
             password.trailingAnchor.constraint(equalTo: email.trailingAnchor),
             password.topAnchor.constraint(equalTo: email.bottomAnchor, constant: 10.0),
-            password.heightAnchor.constraint(equalToConstant: 50.0),
+            
         ]
         
         let sendConstraints = [
@@ -189,15 +204,25 @@ class SignInViewController: UIViewController {
     }
 }
 
-extension SignInViewController: UITextFieldDelegate {
+extension SignInViewController: TextFieldDelegate {
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField.returnKeyType == .done) {
             view.endEditing(true)
             return false
         } else {
-            password.becomeFirstResponder()
+            password.gainFocus()
         }
         return false
+    }
+    
+    func textFieldDidChanged(isValid: Bool, bitmask: Int) {
+        if isValid {
+            self.bitmaskResult = self.bitmaskResult | bitmask }
+        else {
+            self.bitmaskResult = self.bitmaskResult & ~bitmask }
+        
+        self.send.enable((SignInForm.email.rawValue & self.bitmaskResult != 0) && (SignInForm.password.rawValue & self.bitmaskResult != 0 ))
     }
 }
 

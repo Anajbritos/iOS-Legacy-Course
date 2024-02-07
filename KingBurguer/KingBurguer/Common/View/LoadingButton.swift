@@ -50,6 +50,15 @@ class LoadingButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func enable(_ isEnabled: Bool) {
+        button.isEnabled = isEnabled
+        if isEnabled {
+            alpha = 1
+        } else {
+            alpha =  0.5
+        }
+    }
+    
     func startLoading(_ loading: Bool) {
         button.isEnabled = !loading
         if loading {

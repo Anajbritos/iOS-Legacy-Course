@@ -13,3 +13,4 @@ enum SignInState {
     case goToHome
     case error(String)
 }
+
